@@ -1,7 +1,7 @@
 services:
-  postgres_sorteador_db:
+  postgres_sorteador_db_test:
     image: postgres
-    container_name: postgres_sorteador_db
+    container_name: postgres_sorteador_db_test
     restart: always
     ports:
       - 4457:5432
@@ -14,6 +14,6 @@ services:
     ports:
       - 5000:5000
     depends_on:
-      - postgres_sorteador_db
+      - postgres_sorteador_db_test
     env_file:
       - .env.test
